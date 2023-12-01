@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .student-form-container {
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+        }
+
+        .form-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="student-form-container">
+        <label class="form-label">Name of the Student</label><br>
+        <input type="text" placeholder="Enter name" #stuname class="form-input" required><br>
+        <label class="form-label">Activity</label><br>
+        <input type="text" placeholder="Enter activity" #activity class="form-input" required><br><br>
+        <button (click)="addStudent(stuname.value, activity.value)" class="form-button">Add Student</button>
+    </div>
+</body>
+
+</html>
